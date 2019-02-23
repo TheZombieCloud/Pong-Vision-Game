@@ -1,3 +1,3 @@
 # Vision
 
-# Controls are listed in "settings" processing file.
+Controls are listed in the "settings" processing file.
