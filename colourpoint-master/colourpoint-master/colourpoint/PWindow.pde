@@ -1,6 +1,6 @@
 class PWindow extends PApplet {
   boolean run = true;
-  int y = 20;
+  float y = 1;
   
   PWindow() {
     super();
@@ -16,18 +16,15 @@ class PWindow extends PApplet {
   }
 
   void draw() {
-    if (run){
-      rect(30, 60, 10, 55);
-      //run = false;
-    }
+    rect(30, 60+y, 10, 55);
   }
   
   void moveup () {
-    rect (30+y, 60, 10, 55);
+    y += 1;
   }
   
   void movedown() {
-    rect (30-y, 60, 10, 55);
+    y -= 1;
   }
   
   void mousePressed() {
