@@ -9,7 +9,7 @@ class Tracker {
 
   boolean calibrate = false;
 
-  int numColours = 2;
+  int numColours = 4;
   int calibrateColour = 0;
   Colour[] trackMin = new Colour[numColours];
   Colour[] trackMax = new Colour[numColours];
@@ -397,6 +397,12 @@ class Tracker {
 
     case '2':
       calibrateColour = 1;
+      break;
+    case '3':
+      calibrateColour = 2;
+      break;
+    case '4':
+      calibrateColour = 3;
       break;
     }
     //if (key == CODED && keyCode == SHIFT) {

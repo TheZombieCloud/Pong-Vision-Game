@@ -281,3 +281,11 @@ void moveup () {
 void movedown () {
   win.movedown();
 }
+
+void moveup2 () {
+  win.moveup2();
+}
+
+void movedown2 () {
+  win.movedown2();  
+}
