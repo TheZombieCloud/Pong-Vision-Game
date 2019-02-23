@@ -28,14 +28,20 @@ class MyTechnique extends PointingTechnique {
     if (firsta>seconda){
       moveup();
     }
-    else if (seconda!=0){
+    else if (seconda>firsta){
       movedown();
+    }
+    else {
+      dontmove();
     }
     if (thirda>fourtha){
       moveup2();
     }
-    else if (fourtha!=0){
+    else if (fourtha>thirda){
       movedown2();
+    }
+    else {
+      dontmove2();
     }
   }
   

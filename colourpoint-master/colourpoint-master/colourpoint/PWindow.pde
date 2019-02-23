@@ -23,16 +23,16 @@ class PWindow extends PApplet {
   void draw() {
     rect(30, 200+y, 10, 55);
     rect (1250, 200+y2, 10, 55);
-    if (mu){
+    if (mu&&200+y<=530){
       y += 1;
     }
-    if (md){
+    if (md&&200+y>=15){
       y -= 1;
     }
-    if (mu2){
+    if (mu2&&200+y2<=530){
       y2 += 1;
     }
-    if (md2){
+    if (md2&&200+y2>=15){
       y2 -= 1;
     }
   }
@@ -54,6 +54,16 @@ class PWindow extends PApplet {
   
   void movedown2 () {
     md2 = true;
+    mu2 = false;
+  }
+  
+  void dontmove() {
+    md = false;
+    mu = false;
+  }
+  
+  void dontmove2() {
+    md2 = false;
     mu2 = false;
   }
   

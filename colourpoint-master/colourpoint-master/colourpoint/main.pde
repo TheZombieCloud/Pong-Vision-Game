@@ -289,3 +289,11 @@ void moveup2 () {
 void movedown2 () {
   win.movedown2();  
 }
+
+void dontmove() {
+  win.dontmove();
+}
+
+void dontmove2() {
+  win.dontmove2();
+}
