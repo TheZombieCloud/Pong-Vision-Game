@@ -5,6 +5,7 @@ import java.awt.*;
 Capture frame;
 OpenCV opencv;
 
+PWindow win;
 PImage img;
 PImage lastFrame;
 
@@ -28,15 +29,19 @@ boolean fake = false;
 
 String settingsFilename = "data/settings.json";
 
+void settings() {
+  size(320, 420);
+}
 
 void setup() {
   // create window
   surface.setResizable(true);
-  surface.setSize(mainWidth * 2, int(mainHeight));
+  surface.setSize(mainWidth*2, int(mainHeight));
 
   PImage img = new PImage(mainWidth, mainHeight);
   PImage lastFrame = new PImage(mainWidth, mainHeight);
-
+  
+  win = new PWindow();
   // access the camera
   // (you may have to change this line to get it to work)
   // uncomment this to get list of cameras 
@@ -67,7 +72,6 @@ void setup() {
 
 
 void draw() {
-
   if (frame.available()) {
     frame.read();
 
@@ -80,13 +84,11 @@ void draw() {
     tracker.track(img);
 
     tracker.draw();
-
     if (task == TASK_EXPERIMENT)
       experiment.draw();
 
     if (task == TASK_DEMO)
       demo.draw();
-
     if (task != TASK_NONE) {
       // cursor crosshair
       float s = 20;
@@ -270,4 +272,12 @@ void load() {
     println(e);
     println("Error loading " + settingsFilename);
   }
+}
+
+void moveup () {
+  win.moveup();
+}
+
+void movedown () {
+  win.movedown();
 }
