@@ -1,6 +1,8 @@
 class PWindow extends PApplet {
   boolean run = true;
   float y = 1;
+  boolean mu = false;
+  boolean md = false;
   
   PWindow() {
     super();
@@ -8,7 +10,7 @@ class PWindow extends PApplet {
   }
 
   void settings() {
-    size(500, 200);
+    size(1500, 600);
   }
 
   void setup() {
@@ -17,14 +19,22 @@ class PWindow extends PApplet {
 
   void draw() {
     rect(30, 60+y, 10, 55);
+    if (mu){
+      y += 1;
+    }
+    if (md){
+      y -= 1;
+    }
   }
   
   void moveup () {
-    y += 1;
+    mu = true;
+    md = false;
   }
   
   void movedown() {
-    y -= 1;
+    md = true;
+    mu = false;
   }
   
   void mousePressed() {

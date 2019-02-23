@@ -1,7 +1,7 @@
 class MyTechnique extends PointingTechnique {
 
   MyTechnique() {
-    name = "PONGGGGGG BOIS";
+    name = "PONG";
   }
 
   void handle(Blob[][] blobs) {

@@ -67,7 +67,7 @@ void setup() {
   load();
 
   // default technique when started
-  pickTechnique('4');
+  pickTechnique('5');
 }
 
 
